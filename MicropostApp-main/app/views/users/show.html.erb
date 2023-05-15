@@ -1,7 +1,5 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @user %>
-
 <!--reformatted to render Bootstrap flexbox columns:-->
 <div class="row">
   <div class="col-md-4">
@@ -13,7 +11,7 @@
     <%= link_to "Edit this user", edit_user_path(@user) %> |
     <%= link_to "Back to users", users_path %>
     <%= button_to "Destroy this user", @user, method: :delete %>
-      <h2>Relations</h2>
+      <h3>Relations</h3>
       <ol>
         <%= render 'shared/relationcount' %>
       </ol>

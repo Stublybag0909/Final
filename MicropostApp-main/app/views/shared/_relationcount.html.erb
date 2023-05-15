@@ -2,15 +2,15 @@
 
 <div class="stats">
   <a href="<%= following_user_path(@user) %>">
-    <strong id="following" class="stat">
+    <strong id="followers" class="stat">
       <%= @user.following.count %>
     </strong>
-    following
+    followers
   </a>
   <a href="<%= followers_user_path(@user) %>">
-    <strong id="followers" class="stat">
+    <strong id="following" class="stat">
       <%= @user.followers.count %>
     </strong>
-    followers
+    following
   </a>
 </div>
