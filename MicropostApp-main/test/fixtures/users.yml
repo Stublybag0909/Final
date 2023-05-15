@@ -1,0 +1,10 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+# using literals allows for new instance to work
+one:
+  name: "joebibin"
+  email: "joe@joemail.com"
+
+two:
+  name: "oogabooga"
+  email: "wooga@tooga.com"

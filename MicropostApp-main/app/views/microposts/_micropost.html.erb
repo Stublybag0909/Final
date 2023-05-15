@@ -1,0 +1,20 @@
+<div id="<%= dom_id micropost %>">
+  <!--added for Micropost parital view:-->
+  <li>
+  <%= link_to gravatar_for(micropost.user), micropost.user %>
+  <%= link_to micropost.user.name, micropost.user %>
+  <%= micropost.content %>
+  Posted <%= time_ago_in_words(micropost.created_at) %> ago
+  </li>
+
+  <p>
+    <strong>Content:</strong>
+    <%= micropost.content %>
+  </p>
+
+  <p>
+    <strong>User:</strong>
+    <%= micropost.user_id %>
+  </p>
+
+</div>
