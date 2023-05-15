@@ -2,6 +2,9 @@
 
 <h1>Users</h1>
 
+<%= link_to "New user", new_user_path %>
+<div>
+<%= will_paginate @users%>
 <div id="users">
   <% @users.each do |user| %>
     <%= render user %>
@@ -10,7 +13,6 @@
     </p>
   <% end %>
 </div>
-
-<%#= will_paginate %>
+</div>
 
 <%= link_to "New user", new_user_path %>

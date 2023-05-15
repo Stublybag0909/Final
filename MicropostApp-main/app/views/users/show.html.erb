@@ -3,8 +3,6 @@
 <%= render @user %>
 
 <!--reformatted to render Bootstrap flexbox columns:-->
-<%= select_tag :per_page, options_for_select([10,20,50], params[:per_page].to_i),
-       :onchange => "if(this.value){window.location='?per_page='+this.value;}" %>
 <div class="row">
   <div class="col-md-4">
     <h1>
@@ -24,23 +22,14 @@
       <ol>
         <%= render 'follow_form' if session[:user_id]=@user.id?%>
       </ol>
+      <%= link_to "New post", new_micropost_path %>
     <% if @user.microposts.any? %>
 
       <h3>Microposts (<%= @user.microposts.count %>)</h3>
-      <nav aria-label="Page navigation example">
-        <ul class="pagination">
-          <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-          <li class="page-item"><a class="page-link" href="#">1</a></li>
-          <li class="page-item"><a class="page-link" href="#">2</a></li>
-          <li class="page-item"><a class="page-link" href="#">Next</a></li>
-        </ul>
-      </nav>
-      <li class="page-item">
       <ol>
+        <%= will_paginate @microposts %>
         <%= render @microposts %>
       </ol>
-      <%= link_to "New post", new_micropost_path %>
-      </li>
   </div>
 </div>
 <% end %>

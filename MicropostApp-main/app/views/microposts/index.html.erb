@@ -2,6 +2,7 @@
 
 <h1>Microposts</h1>
 
+<%= will_paginate %>
 <div id="microposts">
   <% @microposts.each do |micropost| %>
     <%= render micropost %>
@@ -10,5 +11,6 @@
     </p>
   <% end %>
 </div>
+<%= will_paginate %>
 
 <%= link_to "New micropost", new_micropost_path %>
